@@ -46,7 +46,7 @@ class GuestLeadController extends Controller
             'name' => 'required',
             'surname' => 'required',
             'phone' => 'required',
-            'emial' => 'required',
+            'email' => 'required',
             'message' => 'required'
         ]);
 
@@ -58,7 +58,8 @@ class GuestLeadController extends Controller
         }
 
         $newContact = new GuestLead();
-        $newContacr->fill($form_data);
+        $newContact->fill($form_data);
+        
 
         $newContact->save();
 
